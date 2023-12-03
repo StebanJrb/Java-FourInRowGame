@@ -2,15 +2,52 @@ package Main;
 
 import Sources.Board;
 import Sources.Player;
+
+import javax.swing.*;
 import java.util.Scanner;
 
-public class Main{
-    
+public class FourInRowMain extends JFrame {
+    private Board board;
+    private Player [] players;
+    public FourInRowMain(){
+        setTitle("FourInRowMain");
+        getContentPane().setLayout(null);
+        this.board = new Board();
+        this.players = new Player[2];
+
+        /*String name1 = JOptionPane.showInputDialog("..:: Write Player#1 Name");
+        char token1 = name1.charAt(0);
+        players[0] = new Player(name1,token1);
+        String name2 = JOptionPane.showInputDialog("..:: Write Player#2 Name");
+        char token2 = name2.charAt(0);
+        players[1] = new Player(name2,token2);*/
+
+        PanelBoard pnlBoard = new PanelBoard(board);
+        pnlBoard.setBounds(0,100,600,600);
+        PanelPlayer pnlPlayers = new PanelPlayer(1, "Steban");
+        pnlPlayers.setBounds(0,0,600,100);
+
+
+
+
+        //All code to Jframe
+        getContentPane().add(pnlBoard);
+        getContentPane().add(pnlPlayers);
+        pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
+        setResizable(false);
+        setSize(615,690);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
     public static void main(String[] args) {
+        SwingUtilities.invokeLater(()->{
+            FourInRowMain game = new FourInRowMain();
+        });
         Scanner x = new Scanner(System.in);
         Board Tab = new Board();
         Player [] Pla = new Player[2];
-
         System.out.println("--------------------------------------------------");
         System.out.println("!                                                !");
         System.out.println("!                                                !");
@@ -33,7 +70,7 @@ public class Main{
             switch(Op){
                 case 1:{
                     Tab.ShowBoard();
-                    if(Tab.Winner(Pla[1].getToken())==true){
+                    if(Tab.Winner(Pla[1].getToken())== true){
                         System.out.println("..:: "+Pla[1].getName()+" WON ");
                         Op = 3;
                         break;}
@@ -44,7 +81,7 @@ public class Main{
                 }break;
                 case 2:{
                     Tab.ShowBoard();
-                    if(Tab.Winner(Pla[0].getToken())==true){
+                    if(Tab.Winner(Pla[0].getToken())== true){
                         System.out.println("..:: "+Pla[0].getName()+" WON ");
                         Op = 3;
                         break;}
