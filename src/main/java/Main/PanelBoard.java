@@ -17,15 +17,15 @@ public class PanelBoard extends JPanel {
     private static int turn = 0;
     private int currentX;
     public PanelBoard(Board board){
-
         imageToShow = Controller.setImage(image,600,550);
         imageToShow.setHorizontalAlignment(JLabel.CENTER);
         imageToShow.setVerticalAlignment(JLabel.CENTER);
         imageToShow.setEnabled(true);
         JLabel prueba = Controller.setImage("./images/red.png",90,90);
-        prueba.setBounds(400,5,80,80);
+        prueba.setBounds(7,430,70,70);
+        imageToShow.add(prueba);
+        imageToShow.setComponentZOrder(prueba,0);
         add(imageToShow);
-        add(prueba);
     }
     public void play(Player [] players, Board board, PanelPlayer pnlPlayer){
             imageToShow.addMouseListener(
