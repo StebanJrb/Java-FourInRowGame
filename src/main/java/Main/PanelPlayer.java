@@ -15,10 +15,10 @@ public class PanelPlayer extends JPanel {
 
     public PanelPlayer(int turn, String player){
         if(turn == 0){
-            imageToShow = Controller.setImage("./images/red.png", 90, 90);
+            imageToShow = Controller.setImage("./images/black.png", 90, 90);
         }
         if(turn == 1) {
-            imageToShow = Controller.setImage("./images/black.png", 90, 90);
+            imageToShow = Controller.setImage("./images/red.png", 90, 90);
         }
             setLayout(null);
             imageToShow.setBounds(0,5,100,100);
@@ -33,10 +33,10 @@ public class PanelPlayer extends JPanel {
     }
     public void upDate(int turn, Player player){
         if (turn == 0) {
-            imageToShow.setIcon(Controller.setImage("./images/red.png", 90, 90).getIcon());
+            imageToShow.setIcon(Controller.setImage("./images/black.png", 90, 90).getIcon());
             playerString.setText("Player "+player.getName()+" choose 1 - 7");
         } else if (turn == 1) {
-            imageToShow.setIcon(Controller.setImage("./images/black.png", 90, 90).getIcon());
+            imageToShow.setIcon(Controller.setImage("./images/red.png", 90, 90).getIcon());
             playerString.setText("Player "+player.getName()+" choose 1 - 7");
         }
     }

@@ -5,15 +5,16 @@ import Sources.Board;
 import Sources.Player;
 
 import javax.swing.*;
+import javax.swing.border.CompoundBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class PanelBoard extends JPanel {
     private static final int boxSize = 35;
-    private Board board;
     private static final String image= "./images/board.png";
     private JLabel imageToShow;
+    private JLabel tokens[][];
     private static int turn = 0;
     private int currentX;
     public PanelBoard(Board board){
@@ -21,11 +22,25 @@ public class PanelBoard extends JPanel {
         imageToShow.setHorizontalAlignment(JLabel.CENTER);
         imageToShow.setVerticalAlignment(JLabel.CENTER);
         imageToShow.setEnabled(true);
-        JLabel prueba = Controller.setImage("./images/red.png",90,90);
-        prueba.setBounds(7,430,70,70);
-        imageToShow.add(prueba);
-        imageToShow.setComponentZOrder(prueba,0);
+        //JLabel prueba = Controller.setImage("./images/red.png",75,75);
+        //prueba.setBounds(9,426,100,100);
+        //imageToShow.add(prueba);
+        tokens = new JLabel[7][6];
+        int x =7, y =2;
+        for(int i=0; i < tokens.length; i++){
+            for(int j=0; j < tokens [i].length ; j++){
+                tokens [i][j] = new JLabel();
+                //tokens [i][j] = Controller.setImage("./images/red.png",75,75);
+                tokens [i][j].setBounds(x,y, 100,100);
+                y+=82;
+                System.out.println("X: "+x+ " Y: "+y);
+                imageToShow.add(tokens[i][j]);
+            }
+            y=2;
+            x+=85;
+        }
         add(imageToShow);
+        //tokens.add
     }
     public void play(Player [] players, Board board, PanelPlayer pnlPlayer){
             imageToShow.addMouseListener(
@@ -37,32 +52,31 @@ public class PanelBoard extends JPanel {
                             switch (toArray(currentX)){
                                 case 0:
                                     System.out.println("1");
-                                    board.putAt(0,players[turn].getToken());
-
+                                    asing(board, players,0);
                                     break;
                                 case 1:
                                     System.out.println("2");
-                                    board.putAt(1,players[turn].getToken());
+                                    asing(board,players,1);
                                     break;
                                 case 2:
                                     System.out.println("3");
-                                    board.putAt(2,players[turn].getToken());
+                                    asing(board,players,2);
                                     break;
                                 case 3:
                                     System.out.println("4");
-                                    board.putAt(3,players[turn].getToken());
+                                    asing(board,players,3);
                                     break;
                                 case 4:
                                     System.out.println("5");
-                                    board.putAt(4,players[turn].getToken());
+                                    asing(board,players,4);
                                     break;
                                 case 5:
                                     System.out.println("6");
-                                    board.putAt(5,players[turn].getToken());
+                                    asing(board,players,5);
                                     break;
                                 case 6:
                                     System.out.println("7");
-                                    board.putAt(6,players[turn].getToken());
+                                    asing(board,players,6);
                                     break;
                                 case 10:
                                     JOptionPane.showInputDialog(null, "Error");
@@ -100,5 +114,15 @@ public class PanelBoard extends JPanel {
             System.out.println("Error at Array");
             return 10;
     }
+    private void asing(Board board, Player players[],int a){
+        if(turn==0){
+            tokens[a][board.getCount(a)].setIcon(Controller.setImage("./images/red.png",75,75).getIcon());
+            board.putAt(a, players[turn].getToken());
+        }else{
+            tokens[a][board.getCount(a)].setIcon(Controller.setImage("./images/black.png",75,75).getIcon());
+            board.putAt(a, players[turn].getToken());
+        }
+    }
 }
+
 
