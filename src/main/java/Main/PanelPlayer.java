@@ -5,9 +5,6 @@ import Sources.Player;
 
 import javax.swing.*;
 import java.awt.Font;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.TitledBorder;
 
 public class PanelPlayer extends JPanel {
     private JLabel imageToShow,playerString;

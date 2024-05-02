@@ -5,10 +5,8 @@ import Sources.Board;
 import Sources.Player;
 
 import javax.swing.*;
-import javax.swing.border.CompoundBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public class PanelBoard extends JPanel {
     private static final int boxSize = 35;
@@ -22,9 +20,6 @@ public class PanelBoard extends JPanel {
         imageToShow.setHorizontalAlignment(JLabel.CENTER);
         imageToShow.setVerticalAlignment(JLabel.CENTER);
         imageToShow.setEnabled(true);
-        //JLabel prueba = Controller.setImage("./images/red.png",75,75);
-        //prueba.setBounds(9,426,100,100);
-        //imageToShow.add(prueba);
         tokens = new JLabel[7][6];
         int x =7, y =2;
         for(int i=0; i < tokens.length; i++){
@@ -81,7 +76,7 @@ public class PanelBoard extends JPanel {
                                 case 10:
                                     JOptionPane.showInputDialog(null, "Error");
                             }
-                            if(board.winner(players[turn].getToken())==true){
+                            if(board. winner(players[turn].getToken())==true){
                                 JOptionPane.showMessageDialog(null, players[turn].getName() + "WON! ");
                             }else{
                                 currentX = 0;
