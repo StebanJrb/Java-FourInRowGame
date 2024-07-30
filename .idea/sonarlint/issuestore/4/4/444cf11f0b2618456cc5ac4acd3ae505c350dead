@@ -1,0 +1,31 @@
+
+È
+java:S2681m"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(ˆæÌ¥ÿÿÿÿÿJ$df0f7998-76a9-49e0-8cf4-b513058b866d
+œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ñé™8øúòŠ2J$73bfb1eb-c69c-45e9-adf8-06779c7cb0d5
+•	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(«­‚¦J$e8fb2232-5146-485a-8bc9-42853df3d780
+m
+java:S1197",Move the array designators [][] to the type.(ÑÈ‚ÜşÿÿÿÿJ$a2c5c85b-d039-442e-af6c-be8f39a015fb
+[
+java:S1659"Declare "y" on a separate line.(Åğ”¼J$eb35ff9c-54d6-432a-9ef8-2073c8e8db38
+}
+java:S3252"AUse static access with "javax.swing.SwingConstants" for "CENTER".(ÆÅÅøJ$99ea716e-0171-4885-a69c-deae8fbbc885
+}
+java:S3252"AUse static access with "javax.swing.SwingConstants" for "CENTER".(â¯¿ËJ$8619d5b1-afcd-465a-9fee-bdc1c2776f75
+k	java:S106"+Replace this use of System.out by a logger.(˜†¯şÿÿÿÿJ$6ec8e475-2754-402b-9ffc-7aad161a8273
+b	java:S131.""Add a default case to this switch.(š¼½…øÿÿÿÿJ$83ab535b-6a51-4977-bbba-433e8832a881
+e	java:S1060"+Replace this use of System.out by a logger.(¸ØïUJ$42871088-a5f9-4c56-9dac-a5970b360e3d
+k	java:S1064"+Replace this use of System.out by a logger.(İè¬øÿÿÿÿJ$2c9ff50d-96a9-4259-a014-08c14faa148d
+f	java:S1068"+Replace this use of System.out by a logger.(ºÙ„½J$1ff1f846-bac5-45d9-af42-d9c62018e067
+e	java:S106<"+Replace this use of System.out by a logger.(×Ë DJ$6c546d8a-b223-4cf1-b42a-efea650256a1
+k	java:S106@"+Replace this use of System.out by a logger.(´ğ«şÿÿÿÿJ$9a8da9da-9ebb-42df-80a5-622ec87a21f5
+k	java:S106D"+Replace this use of System.out by a logger.(ÎÒ°¬øÿÿÿÿJ$cb0c17f4-8e60-432d-a357-b06e8c7b47d3
+f	java:S106H"+Replace this use of System.out by a logger.(ĞëšÏJ$b1a162d5-3292-4e94-9efc-e89a7a7f416d
+h
+java:S1125N"'Remove the unnecessary boolean literal.(Ì„˜îúÿÿÿÿJ$0d380983-b82b-417c-8581-603e16380e31
+w
+java:S2696U"6Make the enclosing method "static" or remove this set.(çÚòÿÿÿÿÿJ$20b0f02b-0cac-4dd3-a161-2d104fb4357d
+f	java:S106l"+Replace this use of System.out by a logger.(ÄÒµJ$c4f258eb-b3ce-4a8c-8d82-e4a608982290
+f
+java:S1197o"*Move the array designators [] to the type.(’Ô¬ÚJ$96328ccc-b040-4ba6-8d42-d29028be0de9
+n
+java:S1068"+Remove this unused "boxSize" private field.(ñé™8”ûòŠ2J$a14df7f9-174b-4a56-89d7-2c6c1d188e85

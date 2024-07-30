@@ -25,7 +25,6 @@ public class PanelBoard extends JPanel {
         for(int i=0; i < tokens.length; i++){
             for(int j=0; j < tokens [i].length ; j++){
                 tokens [i][j] = new JLabel();
-                //tokens [i][j] = Controller.setImage("./images/red.png",75,75);
                 tokens [i][j].setBounds(x,y, 100,100);
                 y+=82;
                 System.out.println("X: "+x+ " Y: "+y);
