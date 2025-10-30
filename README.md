@@ -2,6 +2,8 @@
 
 A classic "Four in a Row" (Connect Four) game implemented in Java with a graphical user interface using Swing.
 
+![](https://github.com/StebanJrb/Java-FourInRowGame/blob/main/GameView.png)
+
 ## Features
 
 - **Two-player gameplay:** Players take turns dropping tokens into a vertical board.
